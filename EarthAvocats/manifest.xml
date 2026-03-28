@@ -6,25 +6,26 @@
   xmlns:mailappor="http://schemas.microsoft.com/office/mailappversionoverrides/1.0"
   xsi:type="MailApp">
 
+  <!-- Identité -->
   <Id>e3b9b0c4-bc20-4b8f-a9d4-fc9e00000123</Id>
   <Version>1.0.0.0</Version>
-  <ProviderName>BlueTous.com</ProviderName>
+  <ProviderName>BlueTous</ProviderName>
   <DefaultLocale>fr-FR</DefaultLocale>
 
   <DisplayName DefaultValue="Modèles Earth Avocats"/>
-  <Description DefaultValue="Insère un modèle de mail Earth Avocats depuis BlueTous.com."/>
+  <Description DefaultValue="Insère un modèle de mail Earth Avocats depuis GitHub Pages."/>
 
-  <!-- ICÔNES -->
-  <IconUrl DefaultValue="https://www.bluetous.com/_addIn/EarthAvocats/assets/icon32.png"/>
-  <HighResolutionIconUrl DefaultValue="https://www.bluetous.com/_addIn/EarthAvocats/assets/icon80.png"/>
+  <!-- Icônes (GitHub Pages) -->
+  <IconUrl DefaultValue="https://bluetous.github.io/AddIn/EarthAvocats/assets/icon32.png"/>
+  <HighResolutionIconUrl DefaultValue="https://bluetous.github.io/AddIn/EarthAvocats/assets/icon80.png"/>
 
-  <!-- PERMISSIONS -->
+  <!-- Permissions -->
   <Permissions>ReadWriteItem</Permissions>
 
-  <!-- SUPPORT URL -->
-  <SupportUrl DefaultValue="https://www.bluetous.com/_addIn/EarthAvocats/support.html"/>
+  <!-- Support -->
+  <SupportUrl DefaultValue="https://bluetous.github.io/AddIn/EarthAvocats/support.html"/>
 
-  <!-- COMMANDES DU RUBAN -->
+  <!-- Commandes Outlook -->
   <VersionOverrides Version="1.1" xsi:type="mailappor:VersionOverrides">
     <mailappor:Hosts>
       <mailappor:Host xsi:type="mailappor:MessageComposeCommandSurface">
@@ -50,6 +51,7 @@
                 <mailappor:Action xsi:type="mailappor:ShowTaskpane">
                   <mailappor:SourceLocation resid="TaskpaneUrl"/>
                 </mailappor:Action>
+
               </mailappor:Control>
             </mailappor:Group>
           </mailappor:OfficeTab>
@@ -58,17 +60,17 @@
       </mailappor:Host>
     </mailappor:Hosts>
 
-    <!-- RESSOURCES -->
+    <!-- Ressources -->
     <mailappor:Resources>
 
       <mailappor:Images>
-        <bt:Image id="Icon16" DefaultValue="https://www.bluetous.com/_addIn/EarthAvocats/assets/icon16.png"/>
-        <bt:Image id="Icon32" DefaultValue="https://www.bluetous.com/_addIn/EarthAvocats/assets/icon32.png"/>
-        <bt:Image id="Icon80" DefaultValue="https://www.bluetous.com/_addIn/EarthAvocats/assets/icon80.png"/>
+        <bt:Image id="Icon16" DefaultValue="https://bluetous.github.io/AddIn/EarthAvocats/assets/icon16.png"/>
+        <bt:Image id="Icon32" DefaultValue="https://bluetous.github.io/AddIn/EarthAvocats/assets/icon32.png"/>
+        <bt:Image id="Icon80" DefaultValue="https://bluetous.github.io/AddIn/EarthAvocats/assets/icon80.png"/>
       </mailappor:Images>
 
       <mailappor:Urls>
-        <mailappor:Url id="TaskpaneUrl" DefaultValue="https://www.bluetous.com/_addIn/EarthAvocats/taskpane.html"/>
+        <mailappor:Url id="TaskpaneUrl" DefaultValue="https://bluetous.github.io/AddIn/EarthAvocats/taskpane.html"/>
       </mailappor:Urls>
 
       <mailappor:ShortStrings>
@@ -78,7 +80,7 @@
       </mailappor:ShortStrings>
 
       <mailappor:LongStrings>
-        <bt:String id="SuperTipDescription" DefaultValue="Ouvre la liste des modèles Earth Avocats hébergés sur BlueTous.com."/>
+        <bt:String id="SuperTipDescription" DefaultValue="Ouvre la liste des modèles Earth Avocats hébergés via GitHub Pages."/>
       </mailappor:LongStrings>
 
     </mailappor:Resources>
