@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<OfficeApp
+  xmlns="http://schemas.microsoft.com/office/appforoffice/1.1"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns:bt="http://schemas.microsoft.com/office/officeappbasictypes/1.0"
+  xmlns:mailappor="http://schemas.microsoft.com/office/mailappversionoverrides/1.0"
+  xsi:type="MailApp">
+
+  <Id>e3b9b0c4-bc20-4b8f-a9d4-fc9e00000123</Id>
+  <Version>1.0.0.0</Version>
+  <ProviderName>BlueTous.com</ProviderName>
+  <DefaultLocale>fr-FR</DefaultLocale>
+
+  <DisplayName DefaultValue="Modèles Earth Avocats"/>
+  <Description DefaultValue="Insère un modèle de mail Earth Avocats depuis BlueTous.com."/>
+
+  <!-- ICÔNES -->
+  <IconUrl DefaultValue="https://www.bluetous.com/_addIn/EarthAvocats/assets/icon32.png"/>
+  <HighResolutionIconUrl DefaultValue="https://www.bluetous.com/_addIn/EarthAvocats/assets/icon80.png"/>
+
+  <!-- PERMISSIONS -->
+  <Permissions>ReadWriteItem</Permissions>
+
+  <!-- SUPPORT URL -->
+  <SupportUrl DefaultValue="https://www.bluetous.com/_addIn/EarthAvocats/support.html"/>
+
+  <!-- COMMANDES DU RUBAN -->
+  <VersionOverrides Version="1.1" xsi:type="mailappor:VersionOverrides">
+    <mailappor:Hosts>
+      <mailappor:Host xsi:type="mailappor:MessageComposeCommandSurface">
+        <mailappor:ExtensionPoint xsi:type="mailappor:MessageComposeCommandSurface">
+
+          <mailappor:OfficeTab id="TabDefault">
+            <mailappor:Group id="EarthTemplatesGroup">
+              <mailappor:Label resid="GroupLabel"/>
+
+              <mailappor:Control xsi:type="mailappor:Button" id="EarthTemplatesButton">
+                <mailappor:Label resid="ButtonLabel"/>
+                <mailappor:Supertip>
+                  <mailappor:Title resid="SuperTipTitle"/>
+                  <mailappor:Description resid="SuperTipDescription"/>
+                </mailappor:Supertip>
+
+                <mailappor:Icon>
+                  <bt:Image size="16" resid="Icon16"/>
+                  <bt:Image size="32" resid="Icon32"/>
+                  <bt:Image size="80" resid="Icon80"/>
+                </mailappor:Icon>
+
+                <mailappor:Action xsi:type="mailappor:ShowTaskpane">
+                  <mailappor:SourceLocation resid="TaskpaneUrl"/>
+                </mailappor:Action>
+              </mailappor:Control>
+            </mailappor:Group>
+          </mailappor:OfficeTab>
+
+        </mailappor:ExtensionPoint>
+      </mailappor:Host>
+    </mailappor:Hosts>
+
+    <!-- RESSOURCES -->
+    <mailappor:Resources>
+
+      <mailappor:Images>
+        <bt:Image id="Icon16" DefaultValue="https://www.bluetous.com/_addIn/EarthAvocats/assets/icon16.png"/>
+        <bt:Image id="Icon32" DefaultValue="https://www.bluetous.com/_addIn/EarthAvocats/assets/icon32.png"/>
+        <bt:Image id="Icon80" DefaultValue="https://www.bluetous.com/_addIn/EarthAvocats/assets/icon80.png"/>
+      </mailappor:Images>
+
+      <mailappor:Urls>
+        <mailappor:Url id="TaskpaneUrl" DefaultValue="https://www.bluetous.com/_addIn/EarthAvocats/taskpane.html"/>
+      </mailappor:Urls>
+
+      <mailappor:ShortStrings>
+        <bt:String id="GroupLabel" DefaultValue="Modèles Earth Avocats"/>
+        <bt:String id="ButtonLabel" DefaultValue="Modèles Earth Avocats"/>
+        <bt:String id="SuperTipTitle" DefaultValue="Insérer un modèle Earth Avocats"/>
+      </mailappor:ShortStrings>
+
+      <mailappor:LongStrings>
+        <bt:String id="SuperTipDescription" DefaultValue="Ouvre la liste des modèles Earth Avocats hébergés sur BlueTous.com."/>
+      </mailappor:LongStrings>
+
+    </mailappor:Resources>
+
+  </VersionOverrides>
+</OfficeApp>
